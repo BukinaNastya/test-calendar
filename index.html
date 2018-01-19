@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+</head>
+<body>
+    <header>
+            <div class="s-container">
+                <div class="buttons-head">
+                        <button id="js-add" class="btn btn--main cta-button"> Добавить </button>
+                        
+                        <button id="js-refresh" class="btn btn--main cta-button"> Обновить </button>
+                        <div id="fast-add" class="active-fast-add">
+                        	<input type="text" placeholder="00-00-0000, Название">
+							<button type="submit">Создать</button>
+                        </div>
+                    </div>
+                <div class="s-search">
+                    <form action="">
+                        <div id="js-search-ico" class="s-search__btn">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </div>
+                        <input type="text" class="s-search__model" id="search">
+                        <div class="s-search__close">
+                            <i class="fa fa-times" aria-hidden="true"></i>
+                        </div>
+                    </form>
+                    <div class="s-search-result">
+                        <div class="s-arrow-popover"></div>
+                        <ul class="s-search-result__inner">
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="s-container">
+            <div class="s-date">
+                <div class="s-month">
+                    <a href="#" class="s-month__prev s-month__btn">
+                        <i class="fa fa-caret-left" aria-hidden="true"></i>
+                    </a>
+                    <span class="s-month__current"> Март 2013 </span>
+                    <a href="#" class="s-month__next s-month__btn">
+                        <i class="fa fa-caret-right" aria-hidden="true"></i>
+                    </a>
+                    <a href="#" class="s-month__btn s-month__btn--current">Сегодня</a>
+                </div>
+            </div>
+            <div class="s-calendar">
+                <div class="s-week">
+                    <div class="s-week__item" data-date="25-03-2013">
+                        <div class="s-week__item-week-date">Понедельник, 25</div>
+                    </div>
+                    <div class="s-week__item" data-date="26-03-2013">
+                        <div class="s-week__item-week-date">Вторник, 26</div>
+                    </div>
+                    <div class="s-week__item" data-date="27-03-2013">
+                        <div class="s-week__item-week-date">Среда, 27</div>
+                    </div>
+                    <div class="s-week__item" data-date="28-03-2013">
+                        <div class="s-week__item-week-date">Четверг, 28</div>
+                    </div>
+                    <div class="s-week__item" data-date="01-03-2013">
+                        <div class="s-week__item-week-date">Пятница, 1</div>
+                    </div>
+                    <div class="s-week__item today" data-date="02-03-2013">
+                        <div class="s-week__item-week-date">Суббота, 2</div>
+                    </div>
+                    <div class="s-week__item" data-date="03-03-2013">
+                        <div class="s-week__item-week-date">Воскресенье, 3</div>
+                    </div>
+                </div>
+                <div class="s-week">
+                    <div class="s-week__item" data-date="04-03-2013">
+                        <div class="s-week__item-week-date">4</div>
+                    </div>
+                    <div class="s-week__item" data-date="05-03-2013">
+                        <div class="s-week__item-week-date">5</div>
+                    </div>
+                    <div class="s-week__item" data-date="06-03-2013">
+                        <div class="s-week__item-week-date">6</div>
+                    </div>
+                    <div class="s-week__item" data-date="07-03-2013">
+                        <div class="s-week__item-week-date">7</div>
+                    </div>
+                    <div class="s-week__item" data-date="08-03-2013">
+                        <div class="s-week__item-week-date">8</div>
+                    </div>
+                    <div class="s-week__item" data-date="09-03-2013">
+                        <div class="s-week__item-week-date">9</div>
+                    </div>
+                    <div class="s-week__item" data-date="10-03-2013">
+                        <div class="s-week__item-week-date">10</div>
+                    </div>
+                </div>
+                <div class="s-week">
+                    <div class="s-week__item" data-date="11-03-2013">
+                        <div class="s-week__item-week-date">11</div>
+                    </div>
+                    <div class="s-week__item" data-date="12-03-2013">
+                        <div class="s-week__item-week-date">12</div>
+                    </div>
+                    <div class="s-week__item" data-date="13-03-2013">
+                        <div class="s-week__item-week-date">13</div>
+                    </div>
+                    <div class="s-week__item" data-date="14-03-2013">
+                        <div class="s-week__item-week-date">14</div>
+                    </div>
+                    <div class="s-week__item" data-date="15-03-2013">
+                        <div class="s-week__item-week-date">15</div>
+                    </div>
+                    <div class="s-week__item" data-date="16-03-2013">
+                        <div class="s-week__item-week-date">16</div>
+                    </div>
+                    <div class="s-week__item" data-date="17-03-2013">
+                        <div class="s-week__item-week-date">17</div>
+                    </div>
+                </div>
+                <div class="s-week">
+                    <div class="s-week__item" data-date="18-03-2013">
+                        <div class="s-week__item-week-date">18</div>
+                    </div>
+                    <div class="s-week__item" data-date="19-03-2013">
+                        <div class="s-week__item-week-date">19</div>
+                    </div>
+                    <div class="s-week__item" data-date="20-03-2013">
+                        <div class="s-week__item-week-date">20</div>
+                    </div>
+                    <div class="s-week__item" data-date="21-03-2013">
+                        <div class="s-week__item-week-date">21</div>
+                    </div>
+                    <div class="s-week__item" data-date="22-03-2013">
+                        <div class="s-week__item-week-date">22</div>
+                    </div>
+                    <div class="s-week__item" data-date="23-03-2013">
+                        <div class="s-week__item-week-date">23</div>
+                    </div>
+                    <div class="s-week__item" data-date="24-03-2013">
+                        <div class="s-week__item-week-date">24</div>
+                    </div>
+                </div>
+                <div class="s-week">
+                    <div class="s-week__item" data-date="25-03-2013">
+                        <div class="s-week__item-week-date">25</div>
+                    </div>
+                    <div class="s-week__item" data-date="26-03-2013">
+                        <div class="s-week__item-week-date">26</div>
+                    </div>
+                    <div class="s-week__item" data-date="27-03-2013">
+                        <div class="s-week__item-week-date">27</div>
+                    </div>
+                    <div class="s-week__item" data-date="28-03-2013">
+                        <div class="s-week__item-week-date">28</div>
+                    </div>
+                    <div class="s-week__item" data-date="29-03-2013">
+                        <div class="s-week__item-week-date">29</div>
+                    </div>
+                    <div class="s-week__item" data-date="30-03-2013">
+                        <div class="s-week__item-week-date">30</div>
+                    </div>
+                    <div class="s-week__item" data-date="31-03-2013">
+                        <div class="s-week__item-week-date">31</div>
+                    </div>
+                </div>
+            </div>
+            <div class="s-event">
+                <div class="s-event__close">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </div>
+                <form action="" name="addEvent">
+                    <input type="text" name="event" id="event" placeholder="Событие">
+                    <input type="text" name="date" id="date" placeholder="День, месяц, год">
+                    <input type="text" name="names" id="names" placeholder="Имена участников">
+                    <div class="s-event__space"></div>
+                    <textarea name="description" id="description" placeholder="Описание"></textarea>
+                    <div class="s-event__space"></div>
+                    <button type="submit">Готово</button>
+                    <button type="reset">Удалить</button>
+                </form>
+            </div>
+        </section>
+
+        <script type="text/javascript">
+            ;(function () {
+			    var exampleEvent = [
+			        {
+			            "id": "09-03-2013",
+			            "title": "Напиться!",
+			            "users": "Витя Костин, Дима Михайлов",
+			            "description": ""
+			        },
+			        {
+			            "id": "22-03-2013",
+			            "title": "ДР!",
+			            "users": "Дима Молодцов",
+			            "description": ""
+			        }
+			    ];
+
+			    createDataToLocalStorage('data', exampleEvent);
+
+			    function createDataToLocalStorage(name, data) {
+			        localStorage.setItem(name, JSON.stringify(data));
+			    }
+
+			    function saveDataToLocalStorage(name, data) {
+			        var arr = getDataToLocalStorage(name),
+			            buff = [];
+
+			        for(var i = 0; i < arr.length; i++) {
+			            if(arr[i].id === data.id) {
+			                arr[i] = data;
+			                buff.push(arr[i]);
+			            } else {
+			                buff.push(arr[i]);
+			                if(i === arr.length - 1) {
+			                    buff.push(data);
+			                }
+			            }
+			        }
+
+			        createDataToLocalStorage(name, buff);
+			        updateCurrentData(data.id, data.title, data.users, data.description);
+			    }
+
+			    function getDataToLocalStorage(name) {
+			        var arr = JSON.parse(localStorage.getItem(name));
+			        return arr;
+			    }
+
+			    $('form[name=addEvent]').submit(function (event) {
+			        event.preventDefault();
+			        if ($(this).find('#event').val().length >= 3) {
+			            var itemEvent = {
+			                'id': $(this).find('#date').val(),
+			                'title': $(this).find('#event').val(),
+			                'users': $(this).find('#names').val(),
+			                'description': $(this).find('#description').val()
+			            };
+			            saveDataToLocalStorage('data', itemEvent);
+			            $('.s-event__close').trigger('click');
+			            $(this).trigger('reset');
+			        }
+			    });
+
+			    function appendData() {
+			        var eventData = getDataToLocalStorage('data');
+			        for (var i = 0; i < eventData.length; i++) {
+			            updateCurrentData(eventData[i].id, eventData[i].title, eventData[i].users, eventData[i].description);
+			        }
+			    }
+
+			    function updateCurrentData(id, title, users, description) {
+			        var currentEl = $('[data-date = ' + id + ']');
+			        currentEl.addClass('active-item');
+			        currentEl.find('.s-week__item-week-data').html('');
+			        currentEl.append('<div class="s-week__item-week-data"><div class="title">' + title + '</div><div class="name">' + users + '</div><div class="desc">' + description + '</div></div>');
+			    }
+
+
+			    $('.s-week__item').on('click', function (e) {
+			        $('form[name=addEvent]').trigger('reset');
+			        var self = $(this);
+			        showPopoverEvent(self);
+			    });
+
+			    $('.s-event__close').on('click', function () {
+			        $('.s-event').css({
+			            'top': 0,
+			            'left': 0
+			        }).removeClass('s-event__active');
+			    });
+
+			    function showPopoverEvent(item) {
+			        $('.s-event')
+			            .css({
+			                'top': item.offset().top,
+			                'left': function () {
+			                    if (($(window).outerWidth() - $(this).outerWidth() - 30) >= item.offset().left) {
+			                        return item.offset().left;
+			                    } else {
+			                        return $(window).outerWidth() - $(this).outerWidth() - 30;
+			                    }
+			                }
+			            })
+			            .addClass('s-event__active')
+			            .valueEvent(item);
+			    }
+
+			    $.fn.valueEvent = function (item) {
+			        var eventData = getDataToLocalStorage('data'),
+			            eventDataLength = eventData.length,
+			            form = $(this),
+			            date = form.find('#date'),
+			            event = form.find('#event'),
+			            names = form.find('#names'),
+			            description = form.find('#description');
+
+			        date.val(item.data('date'));
+
+			        for (var i = 0; i < eventDataLength; i++) {
+			            if (item.data('date') === eventData[i].id) {
+			                event.val(eventData[i].title);
+			                names.val(eventData[i].users);
+			                description.val(eventData[i].description);
+			            }
+			        }
+			    };
+
+			    $('#search').keyup(function () {
+			        if ($(this).val().length > 0) {
+			            $('.s-search__close').addClass('s-search__close-active');
+
+			            var valueText = $(this).val().toLowerCase(),
+			                eventData = getDataToLocalStorage('data'),
+			                eventDataLength = eventData.length,
+			                str = '';
+
+			            for(var i = 0; i < eventDataLength; i++) {
+			                if(eventData[i].title.toLowerCase().indexOf(valueText) !== -1) {
+			                    $('.s-search-result').addClass(('s-search-result-active'));
+			                    str += '<li class="s-search-result__list"><div class="s-search-result__list-name">' + eventData[i].title + '</div><div class="s-search-result__list-date">' + eventData[i].id + '</div></li>'
+			                }
+
+			                // 2 вариант поиск по всем значениям в событии
+			                // var searchStr = '';
+			                // for(var key in eventData[i]) {
+			                //     searchStr += eventData[i][key];
+			                // }
+			                // if(searchStr.toLowerCase().indexOf(valueText) !== -1) {
+			                //     $('.s-search-result').addClass(('s-search-result-active'));
+			                //     str += '<li class="s-search-result__list"><div class="s-search-result__list-name">' + eventData[i].title + '</div><div class="s-search-result__list-date">' + eventData[i].id + '</div></li>'
+			                // }
+			            }
+			            $('.s-search-result__inner').html(str);
+
+			        } else {
+			            $('.s-search-result').removeClass(('s-search-result-active'));
+			        }
+			    });
+
+			    $('.s-search__close').on('click', function () {
+			        $('.s-search-result').removeClass(('s-search-result-active'));
+			        $('#search').val('');
+			    });
+
+			    appendData();
+			
+			$(document).ready(function(){
+				$('.s-week__item-week-data').each(function(){
+					if($(this).text() != '')
+						$(this).parent().addClass('active-item');
+				});
+
+				$('#js-add').click(function(){
+					$('#fast-add').toggleClass('active-fast-add')
+				});
+
+				$('#fast-add button').click(function(){
+					var data = $('#fast-add input').val().split(',');
+					updateCurrentData(data[0], data[1], '', '');
+
+					var itemEvent = {
+			                'id': data[0],
+			                'title': data[1],
+			                'users': '',
+			                'description': ''
+			            };
+
+			        saveDataToLocalStorage('data', itemEvent);
+
+					/*var currentEl = $('[data-date = ' + data[0] + ']');
+			        currentEl.addClass('active-item');
+			        currentEl.find('.s-week__item-week-data').html('');
+			        currentEl.append('<div class="s-week__item-week-data"><div class="title">' + data[1] + '</div><div class="name"></div><div class="desc"></div></div>');*/
+				});
+			});
+			})();
+        </script>
+</body>
+</html>
